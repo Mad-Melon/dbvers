@@ -1,6 +1,6 @@
 package esc.db.dbvers.service;
 
-import esc.db.dbvers.dto.NomenclatureDto;
+import esc.db.dbvers.dto.NomenclatureCurrentVersionDto;
 import esc.db.dbvers.repository.NomRepo;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -10,8 +10,8 @@ import org.springframework.stereotype.Service;
 public class NomServ {
     private final NomRepo nomRepo;
 
-    public NomenclatureDto getNom(Long id){
+    public NomenclatureCurrentVersionDto getNom(Long id){
 
-        return new NomenclatureDto(nomRepo.getById(id));
+        return new NomenclatureCurrentVersionDto(nomRepo.getById(id));
     }
 }

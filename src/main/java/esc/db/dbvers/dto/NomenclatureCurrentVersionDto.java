@@ -6,16 +6,16 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class NomenclatureDto {
+public class NomenclatureCurrentVersionDto {
     private Long id;
     private String name;
     private String pulsCode;
     private String picUrl;
 
-    public NomenclatureDto(Nomenclature nomenclature) {
+    public NomenclatureCurrentVersionDto(Nomenclature nomenclature) {
         this.id = nomenclature.getId();
         this.name = nomenclature.getName();
-        this.pulsCode = nomenclature.getVersion().get(0).getPulsCode();
-        this.picUrl = nomenclature.getVersion().get(0).getPicUrl();
+        this.pulsCode = nomenclature.getNomenclatureCurrentVersion().get().getPulsCode();
+        this.picUrl = nomenclature.getNomenclatureCurrentVersion().get().getPicUrl();
     }
 }

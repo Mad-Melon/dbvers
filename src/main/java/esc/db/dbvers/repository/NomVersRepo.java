@@ -14,7 +14,7 @@ public class NomVersRepo {
 
     @Transactional
     public void insertNew(NomenclatureVersionDto dto) {
-        entityManager.createNativeQuery("INSERT INTO nomenclature_versions (NOMENCLATURE_ID, USER_ID, CREATION_DATE, PULS_CODE, PIC_URL, CURRENT) VALUES (?,?,?,?,?,?)")
+        entityManager.createNativeQuery("INSERT INTO nomenclature_versions (NOMENCLATURE_ID, USER_ID, created, PULS_CODE, PIC_URL, CURRENT) VALUES (?,?,?,?,?,?)")
                 .setParameter(1, dto.getNomenclatureId())
                 .setParameter(2, dto.getUserId())
                 .setParameter(3, dto.getCreationDate())

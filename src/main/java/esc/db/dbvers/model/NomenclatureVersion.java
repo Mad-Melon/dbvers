@@ -2,30 +2,15 @@ package esc.db.dbvers.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.Generated;
-import org.hibernate.annotations.GenerationTime;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import java.time.LocalDateTime;
+import javax.persistence.*;
 
 @Entity
-@Setter
 @Getter
+@Setter
 @Table(name = "nomenclature_versions", schema = "public")
-public class NomenclatureVersion {
-    @Id
-    @Generated(GenerationTime.INSERT)
-    @Column(name = "id")
-    private Long id;
-    @Column(name = "nomenclature_id")
-    private Long nomenclatureId;
-    @Column(name = "user_id")
-    private Long userId;
-    @Column(name = "creation_date")
-    private LocalDateTime creationDate;
+public class NomenclatureVersion extends VersionalModel {
+
     @Column(name = "puls_code")
     private String pulsCode;
     @Column(name = "pic_url")

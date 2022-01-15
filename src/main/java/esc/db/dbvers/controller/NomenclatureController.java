@@ -25,6 +25,6 @@ public class NomenclatureController {
 
     @GetMapping(value = "/get/{id}")
     public ResponseEntity<?> getOne(@PathVariable Long id){
-        return  new ResponseEntity<>(new NomenclatureDto(nomServ.getNom(id)), HttpStatus.OK);
+        return  new ResponseEntity<>(nomServ.getNom(id), HttpStatus.OK);
     }
 }

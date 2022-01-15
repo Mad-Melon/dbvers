@@ -3,17 +3,15 @@ package esc.db.dbvers.model;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Where;
-import org.hibernate.annotations.WhereJoinTable;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Getter
 @Setter
 @Table(name = "nomenclature", schema = "public")
-public class Nomenclature implements Serializable {
+public class Nomenclature {
     @Id
     @Column(name = "id")
     private Long id;

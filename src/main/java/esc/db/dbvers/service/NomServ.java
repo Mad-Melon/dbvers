@@ -1,7 +1,6 @@
 package esc.db.dbvers.service;
 
 import esc.db.dbvers.dto.NomenclatureDto;
-import esc.db.dbvers.model.Nomenclature;
 import esc.db.dbvers.repository.NomRepo;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

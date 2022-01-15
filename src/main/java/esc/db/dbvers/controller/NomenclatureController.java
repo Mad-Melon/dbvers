@@ -1,6 +1,5 @@
 package esc.db.dbvers.controller;
 
-import esc.db.dbvers.dto.NomenclatureDto;
 import esc.db.dbvers.dto.NomenclatureVersionDto;
 import esc.db.dbvers.front.NomRequest;
 import esc.db.dbvers.repository.NomVersRepo;

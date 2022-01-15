@@ -15,7 +15,9 @@ public class NomenclatureCurrentVersionDto {
     public NomenclatureCurrentVersionDto(Nomenclature nomenclature) {
         this.id = nomenclature.getId();
         this.name = nomenclature.getName();
-        this.pulsCode = nomenclature.getNomenclatureCurrentVersion().get().getPulsCode();
-        this.picUrl = nomenclature.getNomenclatureCurrentVersion().get().getPicUrl();
+        if (nomenclature.getNomenclatureCurrentVersion().isPresent()) { //on practice cant be FALSE coz nomenclature is created with version
+            this.pulsCode = nomenclature.getNomenclatureCurrentVersion().get().getPulsCode();
+            this.picUrl = nomenclature.getNomenclatureCurrentVersion().get().getPicUrl();
+        }
     }
 }

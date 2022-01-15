@@ -11,7 +11,7 @@ import java.util.Optional;
 @Getter
 @Setter
 @Table(name = "nomenclature", schema = "public")
-public class Nomenclature extends PersistantModel {
+public class Nomenclature extends PersistentModel {
 
     @Column(name = "name")
     private String name;

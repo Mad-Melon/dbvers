@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @Table(name = "users", schema = "public")
-public class User extends PersistantModel {
+public class User extends PersistentModel {
     @Column(name = "name")
     private String name;
 }

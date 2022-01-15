@@ -1,9 +1,9 @@
 package esc.db.dbvers.controller;
 
 import esc.db.dbvers.dto.NomenclatureVersionDto;
-import esc.db.dbvers.front.NomRequest;
-import esc.db.dbvers.repository.NomVersRepo;
-import esc.db.dbvers.service.NomServ;
+import esc.db.dbvers.front.NewVersionRequest;
+import esc.db.dbvers.repository.NomenclatureVersionRepository;
+import esc.db.dbvers.service.NomenclatureService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.*;
 @AllArgsConstructor
 public class NomenclatureController {
 
-    NomVersRepo nomVersRepo;
-    NomServ nomServ;
+    NomenclatureVersionRepository nomVersRepo;
+    NomenclatureService nomServ;
 
     @PostMapping(value = "/update", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void updateVersion(@RequestBody NomRequest request){
+    public void updateVersion(@RequestBody NewVersionRequest request){
         nomVersRepo.insertNew(new NomenclatureVersionDto(request));
     }
 

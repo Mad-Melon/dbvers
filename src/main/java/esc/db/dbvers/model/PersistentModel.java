@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-public abstract class PersistantModel {
+public abstract class PersistentModel {
     @Setter
     @Getter
     @Id

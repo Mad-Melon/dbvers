@@ -9,7 +9,7 @@ import javax.persistence.EntityManager;
 
 @Repository
 @AllArgsConstructor
-public class NomVersRepo {
+public class NomenclatureVersionRepository {
     private final EntityManager entityManager;
 
     @Transactional

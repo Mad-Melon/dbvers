@@ -1,6 +1,6 @@
 package esc.db.dbvers.dto;
 
-import esc.db.dbvers.front.NomRequest;
+import esc.db.dbvers.front.NewVersionRequest;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,7 +16,7 @@ public class NomenclatureVersionDto {
     private String picUrl;
     private boolean current;
 
-    public NomenclatureVersionDto(NomRequest request) {
+    public NomenclatureVersionDto(NewVersionRequest request) {
         this.userId = request.getUserId();
         this.nomenclatureId = request.getNomenclatureId();
         this.creationDate = LocalDateTime.now();

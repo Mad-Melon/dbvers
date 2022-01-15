@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class NomRequest {
+public class NewVersionRequest {
     private Long nomenclatureId;
     private Long userId;
     private String pulsCode;
